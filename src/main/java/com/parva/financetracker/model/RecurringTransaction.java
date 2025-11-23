@@ -46,7 +46,14 @@ public class RecurringTransaction {
     @Column(name = "end_date")
     private LocalDate endDate;
     
+    @Column(name = "next_execution_date", nullable = false)
+    private LocalDate nextExecutionDate;
+    
+    @Column(name = "last_execution_date")
+    private LocalDate lastExecutionDate;
+    
     @Column(name = "is_active")
+    @Builder.Default
     private Boolean isActive = true;
     
     @Column(name = "created_at")
